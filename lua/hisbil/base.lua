@@ -41,3 +41,15 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
+
+-- set leader
+vim.g.mapleader = ' '
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = "php",
+    callback = function()
+      vim.opt.shiftwidth = 4
+      vim.opt.tabstop = 4
+      vim.opt.autoindent = true
+    end,
+})

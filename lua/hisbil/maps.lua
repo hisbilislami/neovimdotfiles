@@ -2,6 +2,13 @@ local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
 
+keymap.set('n', '<c-k>', '[e')
+keymap.set('n', '<c-j>', ']e')
+keymap.set('v', '<c-j>', ']egv')
+keymap.set('v', '<c-k>', '[egv')
+keymap.set('n', '<Tab>j', '<PageDown')
+keymap.set('n', '<Tab>k', '<PageUp')
+
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')
@@ -34,10 +41,3 @@ keymap.set('n', '<Left>', ':vertical resize +2<CR>')
 keymap.set('n', '<right>', ':vertical resize -2<CR>')
 
 keymap.set('n', ',,', '<c-^>')
-
-keymap.set('n', '<C-k>', '[e')
-keymap.set('n', '<C-j>', ']e')
-keymap.set('v', '<C-k>', '[egv')
-keymap.set('v', '<C-j>', ']egv')
-keymap.set('n', '<Tab>j', '<PageDown')
-keymap.set('n', '<Tab>k', '<PageUp')

@@ -3,6 +3,7 @@ if (not status) then return end
 
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 local formatting = null_ls.builtins.formatting
+local diagnostic = null_ls.builtins.diagnostics
 
 null_ls.setup {
   sources = {
@@ -10,7 +11,9 @@ null_ls.setup {
       --diagnostics_format = '[eslint] #{m}\n(#{c})'
     --}),
     null_ls.builtins.diagnostics.zsh,
-    formatting.prettierd
+    formatting.phpcsfixer,
+    formatting.prettierd,
+    formatting.blade_formatter
   },
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then

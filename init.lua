@@ -1,0 +1,5 @@
+require('hisbil.base')
+require('hisbil.highlight')
+require('hisbil.maps')
+require('hisbil.plugins')
+require('hisbil.linux')

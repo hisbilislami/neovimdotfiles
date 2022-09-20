@@ -1,0 +1,13 @@
+{
+  "name": "hisbil's snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript"
+        ],
+        "path": "./extjs/javascript.json"
+      }
+    ]
+  }
+}

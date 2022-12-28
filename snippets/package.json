@@ -1,12 +1,40 @@
 {
   "name": "hisbil's snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
   "contributes": {
     "snippets": [
       {
         "language": [
-          "javascript"
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "global",
+          "all"
         ],
-        "path": "./extjs/javascript.json"
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/frameworks/extjs/javascript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/frameworks/his/master_crud.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/frameworks/codeigniter/php.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/frameworks/his/laravel.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/frameworks/his/html.json"
       }
     ]
   }

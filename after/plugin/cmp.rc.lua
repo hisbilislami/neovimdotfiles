@@ -3,7 +3,7 @@ if (not status) then return end
 local lspkind = require 'lspkind'
 local luasnip = require 'luasnip'
 
-require("luasnip.loaders.from_vscode").load({paths = './snippets'})
+require("luasnip.loaders.from_vscode").load({ paths = './snippets' })
 require("luasnip.loaders.from_vscode").lazy_load()
 
 local function formatForTailwindCSS(entry, vim_item)
@@ -24,7 +24,7 @@ local function formatForTailwindCSS(entry, vim_item)
   return vim_item
 end
 
-local check_backspace = function ()
+local check_backspace = function()
   local col = vim.fn.col "." - 1
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
@@ -65,7 +65,6 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
-
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -82,8 +81,8 @@ cmp.setup({
     { name = 'luasnip' },
   }),
   formatting = {
-    format = lspkind.cmp_format({ 
-      with_text = false, 
+    format = lspkind.cmp_format({
+      with_text = false,
       maxwidth = 50,
       before = function(entry, vim_item)
         vim_item = formatForTailwindCSS(entry, vim_item)

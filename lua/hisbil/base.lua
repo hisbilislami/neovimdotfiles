@@ -24,10 +24,11 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.wrap = false -- No Wrap lines
+vim.opt.wrap = false         -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.foldmarker = { "//{", "//}" }
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -46,34 +47,34 @@ vim.opt.formatoptions:append { 'r' }
 vim.g.mapleader = ' '
 
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = "php",
-    callback = function()
-      vim.opt_local.shiftwidth = 4
-      vim.opt_local.tabstop = 4
-      vim.opt_local.autoindent = true
-    end,
+  pattern = "php",
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+    vim.opt_local.autoindent = true
+  end,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = "coffee",
-    callback = function()
-      vim.opt_local.shiftwidth = 2
-      vim.opt_local.tabstop = 2
-    end,
+  pattern = "coffee",
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = "ruby",
-    callback = function()
-      vim.opt_local.shiftwidth = 2
-      vim.opt_local.tabstop = 2
-    end,
+  pattern = "ruby",
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = "yaml",
-    callback = function()
-      vim.opt_local.shiftwidth = 2
-      vim.opt_local.tabstop = 2
-    end,
+  pattern = "yaml",
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end,
 })

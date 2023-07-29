@@ -19,14 +19,11 @@ ts.setup {
     "php",
     "json",
     "yaml",
-    "swift",
     "css",
     "html",
     "lua",
     "cpp",
-    "cuda",
     "hlsl",
-    'arduino',
     'sql'
   },
   autotag = {

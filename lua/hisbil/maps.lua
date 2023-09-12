@@ -41,3 +41,5 @@ keymap.set('n', '<Left>', ':vertical resize +2<CR>')
 keymap.set('n', '<right>', ':vertical resize -2<CR>')
 
 keymap.set('n', ',,', '<c-^>')
+
+keymap.set("n", "<S-t>", [[<Esc>:lua require'luasnip'.unlink_current()<CR>a]], { noremap = true, silent = true })

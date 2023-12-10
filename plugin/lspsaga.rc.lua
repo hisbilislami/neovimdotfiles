@@ -14,9 +14,9 @@ saga.setup({
     --   frequency = 7
     -- },
   },
-  outline = {
-    layout = 'normal'
-  }
+  -- outline = {
+  --   layout = 'normal'
+  -- }
 })
 
 local opts = { noremap = true, silent = true }

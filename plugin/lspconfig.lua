@@ -35,7 +35,6 @@ local on_attach = function(client, bufnr)
   --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-
 end
 
 protocol.CompletionItemKind = {
@@ -132,11 +131,11 @@ nvim_lsp.intelephense.setup {
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true,
-}
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "●" },
+    severity_sort = true,
+  }
 )
 
 -- Diagnostic symbols in the sign column (gutter)
@@ -148,10 +147,15 @@ end
 
 vim.diagnostic.config({
   virtual_text = {
-    prefix = '●'
+    severity_sort = true,
+    prefix = "●", -- Could be '■', '▎', 'x'
+    source = "always", -- Or "if_many"
   },
+  severity_sort = true,
   update_in_insert = true,
   float = {
     source = "always", -- Or "if_many"
   },
+  signs = true,
+  numhl = "DiagnosticLineNumberError",
 })

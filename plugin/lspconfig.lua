@@ -157,5 +157,4 @@ vim.diagnostic.config({
     source = "always", -- Or "if_many"
   },
   signs = true,
-  numhl = "DiagnosticLineNumberError",
 })

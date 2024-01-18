@@ -13,6 +13,7 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'     -- Common utilities
   use 'kdheepak/tabline.nvim'
   use 'nvim-tree/nvim-web-devicons'
+  use 'norcalli/nvim-colorizer.lua'
 
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'

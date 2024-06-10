@@ -5,6 +5,7 @@ treesitter.setup {
   highlight = {
     enable = true,
     disable = {},
+    use_languagetree = true,
   },
   indent = {
     enable = true,
@@ -25,9 +26,6 @@ treesitter.setup {
     "cpp",
     "hlsl",
     'sql'
-  },
-  autotag = {
-    enable = true,
   },
 }
 

@@ -57,6 +57,8 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+-- vim.cmd('autocmd BufRead,BufNewFile *.hbs set filetype=html')
+--
 vim.api.nvim_create_autocmd('FileType', {
   pattern = "coffee",
   callback = function()

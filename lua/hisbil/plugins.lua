@@ -56,7 +56,9 @@ packer.startup(function(use)
   use 'tpope/vim-unimpaired'
 
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
+  use 'dinhhuy258/git.nvim'              -- For git blame & browse
+
+  use 'mustache/vim-mustache-handlebars' -- for handlebars
 
   use 'tpope/vim-fugitive'
 end)

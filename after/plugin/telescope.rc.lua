@@ -49,6 +49,19 @@ vim.keymap.set('n', '<Leader>o',
       hidden = true
     })
   end)
+vim.keymap.set('n', '<leader>lg', function()
+  builtin.live_grep({
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--fixed-strings'
+    }
+  })
+end, {})
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)

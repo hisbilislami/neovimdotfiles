@@ -82,3 +82,5 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.tabstop = 2
   end,
 })
+
+vim.g.python3_host_prog = '~/venv/bin/python'

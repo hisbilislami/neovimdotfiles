@@ -61,4 +61,8 @@ packer.startup(function(use)
   use 'mustache/vim-mustache-handlebars' -- for handlebars
 
   use 'tpope/vim-fugitive'
+
+  use({ 'projekt0n/github-nvim-theme' })
+  use "rebelot/kanagawa.nvim"
+  use "morhetz/gruvbox"
 end)

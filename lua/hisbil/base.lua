@@ -83,4 +83,4 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-vim.g.python3_host_prog = '~/venv/bin/python'
+vim.g.python3_host_prog = os.getenv("HOME") .. "/venv/bin/python"

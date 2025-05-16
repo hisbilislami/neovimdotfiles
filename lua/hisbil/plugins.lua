@@ -45,8 +45,8 @@ packer.startup(function(use)
   }
   use "rafamadriz/friendly-snippets"
   use 'saadparwaiz1/cmp_luasnip'
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  use "mason-org/mason.nvim"
+  use 'mason-org/mason-lspconfig.nvim'
   use 'nvimtools/none-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   -- use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 
